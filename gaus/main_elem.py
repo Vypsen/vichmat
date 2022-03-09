@@ -8,8 +8,7 @@ def mainGaus(matrix, vector):
     
     if main_elem == 0:
         return [0]*matrix.shape[1]
-    np.putmask(matrix[index_main_elem[0]], [True]*matrix.shape[0], 0)
-    
+        
     for i in range(matrix.shape[0]):
         multiplier = matrix[(i,index_main_elem[1])]/main_elem
         matrix[i] -= main_line*multiplier 
