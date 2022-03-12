@@ -13,14 +13,14 @@ if __name__ == '__main__':
     
     if det(matrix) != 0:
         answer = np.round(solve(matrix, vector), 7)
-        ansverGaus = np.round(mainGaus(matrix, vector),7)
+        ansverGaus = np.round(mainGaus(matrix, vector), 7)
         
         print(Fore.YELLOW, 'выбор главного элемента:', ansverGaus)
         print(Fore.GREEN, 'питоновский ответ:', answer)
         print(Fore.RED, (answer == ansverGaus).all())
         
     else:
-        print(Fore.RED + 'нет решения или их бесконечное количество')
+        print(Fore.RED + 'матрица выроженная')
         
 
         

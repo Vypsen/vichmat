@@ -16,10 +16,9 @@ def mainGaus(matrix, vector):
         
     answer = mainGaus(matrix, vector)  
      
-    root = main_vector/main_elem
-    for alpha in main_line.tolist():
-        root -= alpha/main_elem * answer[main_line.tolist().index(alpha)]
-        main_line[main_line.tolist().index(alpha)] = 0        
+    root = main_vector/main_elem - sum(list(main_line[i]/main_elem * answer[i] 
+                                            for i in range(len(main_line.tolist()))))
+    
     answer[index_main_elem[1]] = root
             
     return answer
