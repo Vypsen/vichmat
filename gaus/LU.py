@@ -33,6 +33,9 @@ def result(l, u, v):
   
     return x
 
-def LuDecomposition(m, v):
-    l, u = createLU(m)
-    return result(l, u, v)
+def LuDecomposition(matrix, vector):
+    matrix = matrix.copy()
+    vector = vector.copy()
+    
+    l, u = createLU(matrix)
+    return result(l, u, vector)
