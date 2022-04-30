@@ -1,4 +1,6 @@
 import numpy as np
+import sys
+
 def createLU(m):
     
     u = np.zeros((m.shape[0], m.shape[0]))
@@ -16,6 +18,7 @@ def createLU(m):
         for j in range(i, m.shape[0]):
             u[i][j] = m[i][j] - sum([l[i][k] * u[k][j] for k in range(i)])
             l[j][i] = (m[j][i] - sum([l[j][k] * u[k][i] for k in range(i)]))/u[i][i]
+            print(u)
     return l, u
             
             
@@ -38,4 +41,5 @@ def LuDecomposition(matrix, vector):
     vector = vector.copy()
     
     l, u = createLU(matrix)
+    print(l,u)
     return result(l, u, vector)
