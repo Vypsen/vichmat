@@ -56,8 +56,6 @@ def inverse(matrix, vector):
     prev_inv = createInverse(matrix)
     
     temp = dot(matrix,prev_inv)
-    print(np.array(temp))
-
     x = dot(prev_inv, vector)  
 
     return (np.transpose(x)[0])
