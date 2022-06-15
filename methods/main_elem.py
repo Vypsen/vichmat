@@ -22,4 +22,4 @@ def mainGaus(matrix, vector):
                                             for i in range(len(main_line.tolist()))))
     
     answer[index_main_elem[1]] = root
-    return answer
+    return np.array(answer)
